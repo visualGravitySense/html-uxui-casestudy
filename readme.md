@@ -1,6 +1,7 @@
 # BMW Case study
 
-![[case-1.png]]
+
+![Banner Test](case-1.png)
 
 ## Workflow Technical Diagram/Tree
 
