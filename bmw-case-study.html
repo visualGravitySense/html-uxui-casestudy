@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW - Celebrating 50 Years of Innovation</title>
+    
+    <!-- BMW Type Next Latin Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- BMW Type Next Latin Font CSS Variables -->
+    <style>
+        :root {
+            --site-context-font: 'Noto Sans Japanese', 'BMWTypeNextLatin','Inter', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+            --bmw-font-primary: 'Noto Sans Japanese', 'Inter', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+            --bmw-font-weight-light: 'Noto Sans Japanese', 300;
+            --bmw-font-weight-regular: 'Noto Sans Japanese', 400;
+            --bmw-font-weight-medium: 'Noto Sans Japanese', 500;
+            --bmw-font-weight-semibold: 'Noto Sans Japanese', 600;
+            --bmw-font-weight-bold: 'Noto Sans Japanese', 700;
+            --bmw-font-weight-extrabold: 'Noto Sans Japanese', 800;
+            --bmw-font-weight-black: 'Noto Sans Japanese', 900;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--site-context-font);
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2530 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: var(--bmw-font-weight-semibold);
+            color: #262626;
+        }
+
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            /* gap: 10px; */
+            
+        }
+
+        .video-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: var(--bmw-font-weight-medium);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Hero Section - High Motivation */
+        .hero {
+            padding: 20px 0;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:0.8" /><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:0.8" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/></svg>') center/cover; */
+            background: #ffffff;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #262626;
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr;
+            gap: 60px;
+            /* align-items: center; */
+        }
+
+        .hero-opening-text {
+            /* position: relative;
+            z-index: 1;
+            color: #262626; */
+            display: block;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: var(--bmw-font-weight-light);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Social Proof - Motivation */
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .proof-item {
+            text-align: center;
+            color: white;
+        }
+
+        .proof-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            display: block;
+        }
+
+        .proof-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* CTA Buttons - Strong Prompts */
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: left;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: none;
+            /* border-radius: 50px; */
+            font-size: 1.1rem;
+            font-weight: var(--bmw-font-weight-semibold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: #1c69d4;
+            color: white;
+            /* box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3); */
+        }
+
+        /* Alternative complex design with different style */
+        .complex-neumorphic-alt {
+            position: relative;
+            /* width: 200px; */
+            height: 100px;
+            width: auto;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .outer-container-alt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f0f2f5;
+            border-radius: 50px;
+            box-shadow: 
+                inset 4px 4px 8px #d1d9e6,
+                inset -4px -4px 8px #ffffff;
+        }
+
+        /* Small button */
+        .neuro-small {
+            padding: 8px 16px;
+            font-size: 14px;
+            box-shadow: 
+                4px 4px 1px #a3b1c6,
+                -4px -4px 1px #ffffff;
+        }
+
+        .neuro-small:hover {
+            box-shadow: 
+                3px 3px 2px #a3b1c6,
+                -3px -3px 2px #ffffff;
+            transform: translate(0.5px, 0.5px);
+        }
+
+        .neuro-small:active {
+            box-shadow: 
+                inset 2px 2px 4px #a3b1c6,
+                inset -2px -2px 4px #ffffff;
+        }
+
+        .inner-container-alt {
+            position: absolute;
+            top: 26px;
+            left: 26px;
+            right: 26px;
+            bottom: 26px;
+            background: linear-gradient(135deg, #0063cc, #0066cc);
+            /* border-radius: 24px; */
+            box-shadow: inset 6px 6px 12px #0d5092, inset -6px -6px 12px #59a8f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .inner-container-alt::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="grain"><feTurbulence baseFrequency="0.75" numOctaves="1" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComponentTransfer><feFuncA type="discrete" tableValues="0 0.1 0.2 0.05"/></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(%23grain)" opacity="0.3"/></svg>');
+            pointer-events: none;
+        }
+
+        .complex-neumorphic-alt:hover .outer-container-alt {
+            box-shadow: 
+                inset 2px 2px 4px #d1d9e6,
+                inset -2px -2px 4px #ffffff;
+        }
+
+        .complex-neumorphic-alt:hover .inner-container-alt {
+            box-shadow: 
+                6px 6px 12px #d1d9e6,
+                -6px -6px 12px #ffffff;
+        }
+
+        .complex-neumorphic-alt:active .outer-container-alt {
+            box-shadow: 
+                inset 6px 6px 12px #d1d9e6,
+                inset -6px -6px 12px #ffffff;
+        }
+
+        .complex-neumorphic-alt:active .inner-container-alt {
+            box-shadow: 
+                2px 2px 4px #d1d9e6,
+                -2px -2px 4px #ffffff;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #262626;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #BFD2ED, #88AEE4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Features Section - Ability */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1rem;
+            /* margin-bottom: 20px; */
+            color: #262626;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #262626;
+            /* margin-bottom: 60px; */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: var(--bmw-font-weight-semibold);
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .feature-cta {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: var(--bmw-font-weight-semibold);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .feature-cta:hover {
+            color: #004499;
+        }
+
+        /* Progress Bar - Ability Indicator */
+        .progress-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .progress-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #0066cc;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--bmw-font-weight-bold);
+        }
+
+        .step-text {
+            font-weight: var(--bmw-font-weight-medium);
+            color: #333;
+        }
+
+        .step-arrow {
+            color: #ccc;
+            font-size: 1.5rem;
+        }
+
+        /* Urgency Section - Scarcity Motivation */
+        .urgency {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .urgency-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .urgency h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .urgency p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: var(--bmw-font-weight-bold);
+            display: block;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 100px;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Trust Signals */
+        .trust-signals {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .trust-item {
+            padding: 20px;
+        }
+
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .trust-title {
+            font-weight: var(--bmw-font-weight-semibold);
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .trust-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .social-proof {
+                gap: 20px;
+            }
+            
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 280px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Floating Action Button - Persistent Prompt */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: linear-gradient(45deg, #0066b0, #0c90ef);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-weight: var(--bmw-font-weight-semibold);
+            cursor: pointer;
+            box-shadow: 0 8px 25px #0139615f;
+            transition: all 0.3s ease;
+        }
+
+        .floating-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px #0139615f;
+        }
+
+        .social-proof-container {
+            /* background: rgba(255, 255, 255, 0.1); */
+            /* backdrop-filter: blur(20px); */
+            /* border: 1px solid rgba(255, 255, 255, 0.2); */
+            /* border-radius: 24px; */
+            /* padding: 60px 40px; */
+            
+            position: relative;
+            overflow: hidden;
+            /* max-width: 1200px; */
+            /* width: 100%; */
+        }
+
+        .social-proof-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        
+
+       
+        .social-proof {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            align-items: center;
+        }
+
+        .proof-item {
+            position: relative;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            /* padding: 40px 32px; */
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            /* cursor: pointer; */
+            overflow: hidden;
+        }
+
+        .proof-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: left 0.6s ease;
+        }
+
+        .proof-item:hover::before {
+            left: 100%;
+        }
+
+        /* .proof-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+        } */
+
+        .proof-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: var(--bmw-font-weight-black);
+            background: linear-gradient(135deg, #262626, #393b41, #2e3557);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .proof-text {
+            font-size: 1.1rem;
+            color: #262626;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+        }
+
+        /* .proof-text::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            border-radius: 1px;
+        } */
+
+        .proof-icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            background: #3D3DBC;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            /* mix-blend-mode: luminosity; */
+        }
+
+        .proof-item:hover .proof-icon {
+            /* background: rgba(255, 255, 255, 0.2); */
+            transform: rotate(180deg);
+        }
+
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+
+        @media (max-width: 768px) {
+            .social-proof-container {
+                padding: 40px 24px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .social-proof {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .proof-item {
+                padding: 32px 24px;
+            }
+            
+            .proof-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Right Side Content Styles */
+        .hero-right-side {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* border-radius: 20px; */
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* border-radius: 20px; */
+        }
+
+        .video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #262626;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            animation: rotate 15s linear infinite;
+            z-index: 0;
+        }
+
+        .feature-highlight-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-highlight h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-highlight p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .highlight-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .highlight-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .quick-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-container {
+                height: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+
+            <div class="logo-container">
+                <img src="logo.svg" alt="BMW Logo must be here " class="logo-image">
+                <div class="logo">
+    
+                    Sheer Driving <b>Pleasure</b>
+                </div>
+
+            </div>
+
+            
+            
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section - High Motivation -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                
+                <div class="social-proof-container">
+                    <div class="floating-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+            
+                    <div class="section-header">
+                        <h2 class="section-title">Trusted Worldwide</h2>
+                        <p class="section-subtitle">Join millions who chose excellence</p>
+                    </div>
+            
+                    <div class="social-proof">
+                        <div class="proof-item">
+                            <div class="pulse-ring"></div>
+                            <div class="proof-icon">✨</div>
+                            <span class="proof-number">1546M+</span>
+                            <span class="proof-text">Happy Drivers</span>
+                        </div>
+                        
+                        <div class="proof-item">
+                            <div class="pulse-ring"></div>
+                            <div class="proof-icon">🏆</div>
+                            <span class="proof-number">50</span>
+                            <span class="proof-text">Years Legacy</span>
+                        </div>
+                        
+                        <div class="proof-item">
+                            <div class="pulse-ring"></div>
+                            <div class="proof-icon">🎯</div>
+                            <span class="proof-number">200+</span>
+                            <span class="proof-text">Awards Won</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+            <h4 class="section-title">BMW 50th Anniversary<br>Exclusive Access</h4>
+            <p class="section-subtitle">Join an elite community of BMW.</p>
+
+
+                    
+                        
+                </div>
+
+                <div class="hero-opening-text">
+
+                    <!-- Video Container -->
+                    <div class="video-container">
+
+                        
+
+                        <video class="hero-video" autoplay muted loop playsinline>
+                            <source src="530er-00-teaser-hd.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+
+                        <div class="video-fallback" id="videoFallback" style="display: none;">
+                            🚗 BMW 3 Series<br>Video Preview
+                        </div>
+                        <div class="video-overlay">
+                            <div class="play-button" onclick="playVideo()">▶️</div>
+                        </div>
+                    </div>
+
+                    <h1><b>Celebrating 50 Years of<br>Automotive Excellence</h1>
+                    <p class="hero-subtitle">Experience the BMW 3 Series - Icon of the 80s, Legend of Today</p>
+
+                    <!-- Strong Call-to-Action - Prompt Element -->
+                    <div class="cta-container">
+                        <!-- <a href="#" class="btn btn-primary" onclick="trackConversion('primary_cta')">🎵 Explore Playlists</a> -->
+
+                        <!-- <div>
+                            <div class="button-label">Alternative Complex Button<br>(Outer Pressed, Inner Raised)</div>
+                            <div class="complex-neumorphic-alt">
+                                <div class="outer-container-alt"></div>
+                                <div class="neuro-small">
+                                    <span class="button-text">🎵 Explore Playlists</span>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <button class="neuro-btn neuro-raised neuro-small">🎵 Explore Playlists</button>
+
+                        <!-- <a href="#" class="btn btn-secondary" onclick="trackConversion('secondary_cta')">📱 Download App</a> -->
+                    </div>
+
+                    
+
+                </div>
+
+                <!-- Right Side Content -->
+                <div class="hero-right-side">
+                    
+
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BMW. All rights reserved. | Celebrating 50 Years of Innovation</p>
+        </div>
+    </footer>
+
+    <!-- Floating CTA - Persistent Prompt -->
+    <button class="floating-cta" onclick="trackConversion('floating_cta')">
+        🎵 Start Listening
+    </button>
+
+    <script>
+        // Fogg Behavior Model Implementation
+        
+        // 1. MOTIVATION - Dynamic content updates
+        function updateMotivationalElements() {
+            // Update social proof numbers dynamically
+            const proofNumbers = document.querySelectorAll('.proof-number');
+            proofNumbers.forEach(number => {
+                if (number.textContent.includes('M+')) {
+                    const current = parseInt(number.textContent);
+                    number.textContent = (current + Math.floor(Math.random() * 100)) + 'M+';
+                }
+            });
+        }
+
+        // 2. ABILITY - Progressive disclosure and easy interactions
+        function enhanceUserAbility() {
+            // Add smooth scrolling for better navigation ability
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading states to reduce cognitive load
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        this.style.opacity = '0.7';
+                        this.innerHTML = '⏳ Loading...';
+                        setTimeout(() => {
+                            this.style.opacity = '1';
+                            this.innerHTML = '✅ Success!';
+                        }, 1500);
+                    }
+                });
+            });
+        }
+
+        // 3. PROMPTS - Strategic timing and placement
+        function implementSmartPrompts() {
+            // Countdown timer for urgency
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const futureTime = now + (7 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (34 * 60 * 1000);
+                const distance = futureTime - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            }
+
+            // Update countdown every minute
+            setInterval(updateCountdown, 60000);
+
+            // Exit-intent prompt
+            let hasShownExitPrompt = false;
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 0 && !hasShownExitPrompt) {
+                    hasShownExitPrompt = true;
+                    const floatingBtn = document.querySelector('.floating-cta');
+                    floatingBtn.style.animation = 'pulse 2s infinite';
+                    floatingBtn.innerHTML = '🎁 Wait! Special Offer';
+                }
+            });
+
+            // Scroll-based prompts
+            let hasTriggeredScrollPrompt = false;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                
+                if (scrollPercent > 50 && !hasTriggeredScrollPrompt) {
+                    hasTriggeredScrollPrompt = true;
+                    const floatingBtn = document.querySelector('.floating-cta');
+                    floatingBtn.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        floatingBtn.style.transform = 'scale(1)';
+                    }, 300);
+                }
+            });
+        }
+
+        // Analytics for behavior tracking
+        function trackConversion(action) {
+            console.log(`Conversion tracked: ${action}`);
+            // Here you would integrate with your analytics platform
+            // Example: gtag('event', 'conversion', { action: action });
+        }
+
+        function trackEngagement(action) {
+            console.log(`Engagement tracked: ${action}`);
+            // Track user interactions for optimization
+        }
+
+        // Initialize Fogg Behavior Model enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            enhanceUserAbility();
+            implementSmartPrompts();
+            
+            // Update motivational elements periodically
+            setInterval(updateMotivationalElements, 30000);
+        });
+
+        // Add CSS animation for pulse effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+
+        // Enhanced interactions and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const proofItems = document.querySelectorAll('.proof-item');
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = `${Array.from(proofItems).indexOf(entry.target) * 0.2}s`;
+                        entry.target.style.animation = 'slideInUp 0.8s ease-out forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            proofItems.forEach(item => {
+                observer.observe(item);
+                
+                // Add click interaction
+                item.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // Dynamic number counting animation
+            const numbers = document.querySelectorAll('.proof-number');
+            numbers.forEach(number => {
+                const finalNumber = number.textContent;
+                const numericPart = parseInt(finalNumber.replace(/[^\d]/g, ''));
+                const suffix = finalNumber.replace(/[\d]/g, '');
+                
+                let current = 0;
+                const increment = numericPart / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= numericPart) {
+                        current = numericPart;
+                        clearInterval(timer);
+                    }
+                    number.textContent = Math.floor(current) + suffix;
+                }, 40);
+            });
+        });
+
+        // Add slide in animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+
+        document.head.appendChild(style);
+
+        // Video player functionality
+        function playVideo() {
+            const video = document.querySelector('.video-container video');
+            const playButton = document.querySelector('.play-button');
+            
+            if (video.paused) {
+                video.play().then(() => {
+                    playButton.innerHTML = '⏸️';
+                    video.muted = false;
+                }).catch(error => {
+                    console.log('Video play failed:', error);
+                    // Fallback: show error message
+                    playButton.innerHTML = '❌';
+                    setTimeout(() => {
+                        playButton.innerHTML = '▶️';
+                    }, 2000);
+                });
+            } else {
+                video.pause();
+                playButton.innerHTML = '▶️';
+            }
+        }
+
+        // Auto-play video on hover
+        document.querySelector('.video-container').addEventListener('mouseenter', function() {
+            const video = this.querySelector('video');
+            if (video.paused && video.readyState >= 2) { // HAVE_CURRENT_DATA
+                video.play().then(() => {
+                    video.muted = true;
+                }).catch(error => {
+                    console.log('Auto-play failed:', error);
+                });
+            }
+        });
+
+        document.querySelector('.video-container').addEventListener('mouseleave', function() {
+            const video = this.querySelector('video');
+            if (!video.paused) {
+                video.pause();
+            }
+        });
+
+        // Handle video loading errors
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-container video');
+            const playButton = document.querySelector('.play-button');
+            const videoFallback = document.getElementById('videoFallback');
+            
+            video.addEventListener('error', function(e) {
+                console.log('Video error:', e);
+                playButton.innerHTML = '❌';
+                playButton.style.background = '#ff6b6b';
+                videoFallback.style.display = 'flex';
+            });
+            
+            video.addEventListener('loadeddata', function() {
+                console.log('Video loaded successfully');
+                playButton.innerHTML = '▶️';
+                playButton.style.background = 'rgba(255, 255, 255, 0.9)';
+                videoFallback.style.display = 'none';
+            });
+
+            // Check if video loads within 5 seconds
+            setTimeout(() => {
+                if (video.readyState < 2) { // Less than HAVE_CURRENT_DATA
+                    console.log('Video failed to load within timeout');
+                    videoFallback.style.display = 'flex';
+                    playButton.innerHTML = '❌';
+                    playButton.style.background = '#ff6b6b';
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
