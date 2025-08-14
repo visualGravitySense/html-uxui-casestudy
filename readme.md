@@ -1,6 +1,7 @@
 # BMW Case study
 
-![[case-1.png]]
+
+![Banner Test](case-1.png)
 
 ## Workflow Technical Diagram/Tree
 
@@ -83,7 +84,13 @@ mindmap
 
 ### Social Proof component
 
-![[Pasted image 20250814194909.png|250]]
+
+
+![Banner Test](soc-proof-1.png)
+
+### MOTIVATION
+Why it works: People copy what others do. When users see "15 million happy drivers," they think "If so many people love BMW, it must be good!"
+> Making Users Want to Act 1. Social Proof (Everyone's Doing It!)
 
 ```html
 <div class="proof-item">
