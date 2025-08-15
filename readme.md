@@ -1,5 +1,7 @@
 # BMW Case study
 
+> Example of a repository for students
+
 
 ![Banner Test](case-1.png)
 
